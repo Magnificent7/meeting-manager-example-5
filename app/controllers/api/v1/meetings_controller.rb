@@ -10,7 +10,7 @@ class Api::V1::MeetingsController < ApplicationController
       address: params[:address],
       start_time: params[:start_time],
       end_time: params[:end_time],
-      notes: params[:notes],
+      notes: params[:notes]
       )
     if @meeting.save
       params[:tags].each do |tag_id|
