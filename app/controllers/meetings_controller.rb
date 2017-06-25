@@ -40,6 +40,33 @@ class MeetingsController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @meeting = Meeting.find(params[:id])
+    @tags = Tag.all
+    render :edit
+  end
+
+  def update
+    @meeting = Meeting.find(params[:id])
+    if @meeting.update(
+      name: params[:name],
+      address: params[:address],
+      start_time: params[:start_time],
+      end_time: params[:end_time],
+      notes: params[:notes],
+      )
+      flash[:success] = "Meeting Successfully Updated!"
+      redirect_to meeting_path(@meeting)
+    else
+      @tags = Tag.all
+      render :edit
+    end
+  end
+
+  def delete
+    
+  end
 end
 
 
