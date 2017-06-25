@@ -1,0 +1,19 @@
+current directory: /Users/danielle/actualize/meeting-manager-example/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+/Users/danielle/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20170624-33217-hta8mo.rb extconf.rb
+creating Makefile
+
+current directory: /Users/danielle/actualize/meeting-manager-example/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/danielle/actualize/meeting-manager-example/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/danielle/actualize/meeting-manager-example/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20170624-33217-py5vn9/byebug
