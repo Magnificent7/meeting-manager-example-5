@@ -56,6 +56,13 @@ class MeetingsController < ApplicationController
       end_time: params[:end_time],
       notes: params[:notes],
       )
+      @meeting.tags.destroy_all
+      params[:tags].each do |tag_id|
+        MeetingTag.create(
+          meeting_id: @meeting.id,
+          tag_id: tag_id
+        )
+      end
       flash[:success] = "Meeting Successfully Updated!"
       redirect_to meeting_path(@meeting)
     else
