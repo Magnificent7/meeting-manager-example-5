@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   get '/' => 'meetings#index'
 
   resources :meetings
+
+  namespace :api do
+    namespace :v1 do
+      get '/meetings' => 'meetings#index'
+    end
+  end
 end
 
 
